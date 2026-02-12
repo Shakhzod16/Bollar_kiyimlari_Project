@@ -16,20 +16,20 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.marketplaces': 'Marketpleyslar',
     'nav.about': 'Biz haqimizda',
     'nav.contact': 'Kontaktlar',
-    
+
     // Hero
     'hero.title': 'Bolalar uchun qulay va zamonaviy kiyimlar',
     'hero.subtitle': 'Har kuni kiyish uchun yumshoq, xavfsiz va chiroyli liboslar',
     'hero.products': 'Mahsulotlar',
     'hero.contact': "Bog'lanish",
-    
+
     // Categories
     'categories.title': 'Kategoriyalar',
     'categories.tshirts': 'Futbolkalar',
     'categories.pants': 'Shimlar',
     'categories.hoodies': 'Jilet va Hudilar',
     'categories.sets': "To'plamlar",
-    
+
     // Values
     'values.title': "Nima uchun biz?",
     'values.natural': 'Tabiiy matolar',
@@ -40,7 +40,7 @@ const translations: Record<Language, Record<string, string>> = {
     'values.safety.desc': 'Barcha mahsulotlar sertifikatlangan',
     'values.quality': 'Mustahkam sifat',
     'values.quality.desc': "Kundalik kiyish uchun ishonchli tikuv",
-    
+
     // Products
     'products.title': 'Mahsulotlar',
     'products.filter.all': 'Barchasi',
@@ -49,7 +49,7 @@ const translations: Record<Language, Record<string, string>> = {
     'products.filter.hoodies': 'Hudilar',
     'products.filter.sets': "To'plamlar",
     'products.contact': "Bog'lanish",
-    
+
     // Product items
     'product.tshirt1.name': "Ko'k paxta futbolka",
     'product.tshirt1.desc': "Yumshoq paxta materialdan tayyorlangan qulay futbolka",
@@ -63,7 +63,7 @@ const translations: Record<Language, Record<string, string>> = {
     'product.hoodie1.desc': "Iliq va qulay kapyushonli sviter",
     'product.set1.name': "Yoz to'plami",
     'product.set1.desc': "Futbolka va shortik to'plami",
-    
+
     // Marketplaces
     'marketplaces.title': 'Marketpleyslar',
     'marketplaces.subtitle': 'Mahsulotlarimizni quyidagi platformalarda ham topishingiz mumkin',
@@ -74,19 +74,19 @@ const translations: Record<Language, Record<string, string>> = {
     'marketplaces.uzum': 'Uzum Market',
     'marketplaces.uzum.desc': "O'zbekistonning eng katta onlayn do'koni",
     'marketplaces.open': "Ko'rish",
-    
+
     // About
     'about.title': 'Biz haqimizda',
     'about.story.title': 'Bizning tariximiz',
-    'about.story.p1': "SOF KARAKUL — bu bolalar uchun kundalik kiyimlar ishlab chiqaruvchi brend. Biz har bir bolaning qulayligi va xavfsizligini birinchi o'ringa qo'yamiz.",
+    'about.story.p1': "Bollar Kiyimlari — bu bolalar uchun kundalik kiyimlar ishlab chiqaruvchi brend. Biz har bir bolaning qulayligi va xavfsizligini birinchi o'ringa qo'yamiz.",
     'about.story.p2': "Har bir mahsulot sinchkovlik bilan tanlangan tabiiy paxta va sifatli materiallardan tayyorlanadi. Bolalar terisi uchun eng xavfsiz materiallardan foydalanamiz.",
     'about.story.p3': "Bizning maqsadimiz — har bir bolaga qulay, chiroyli va arzon narxlarda kiyimlarni taqdim etish.",
-    'about.why.title': "Nima uchun SOF KARAKUL?",
+    'about.why.title': "Nima uchun Bollar Kiyimlari?",
     'about.why.item1': "100% tabiiy paxta materiallar",
     'about.why.item2': 'Professional tikuvchilar jamoasi',
     'about.why.item3': "Zamonaviy va qulay dizayn",
     'about.why.item4': 'Butun O\'zbekiston bo\'ylab yetkazib berish',
-    
+
     // Contact
     'contact.title': 'Kontaktlar',
     'contact.subtitle': "Savollaringiz bormi? Biz bilan bog'laning!",
@@ -100,7 +100,7 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.form.message': 'Xabaringiz',
     'contact.form.submit': 'Yuborish',
     'contact.form.success': "Xabaringiz muvaffaqiyatli yuborildi!",
-    
+
     // Footer
     'footer.rights': 'Barcha huquqlar himoyalangan',
     'footer.tagline': "Bolalar uchun qulay va zamonaviy kiyimlar",
@@ -112,20 +112,20 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.marketplaces': 'Маркетплейсы',
     'nav.about': 'О нас',
     'nav.contact': 'Контакты',
-    
+
     // Hero
     'hero.title': 'Удобная и современная одежда для детей',
     'hero.subtitle': 'Мягкая, безопасная и красивая одежда для повседневной носки',
     'hero.products': 'Продукция',
     'hero.contact': 'Связаться',
-    
+
     // Categories
     'categories.title': 'Категории',
     'categories.tshirts': 'Футболки',
     'categories.pants': 'Брюки',
     'categories.hoodies': 'Худи и жилеты',
     'categories.sets': 'Комплекты',
-    
+
     // Values
     'values.title': 'Почему мы?',
     'values.natural': 'Натуральные ткани',
@@ -136,7 +136,7 @@ const translations: Record<Language, Record<string, string>> = {
     'values.safety.desc': 'Вся продукция сертифицирована',
     'values.quality': 'Прочное качество',
     'values.quality.desc': 'Надёжная строчка для повседневной носки',
-    
+
     // Products
     'products.title': 'Продукция',
     'products.filter.all': 'Все',
@@ -145,7 +145,7 @@ const translations: Record<Language, Record<string, string>> = {
     'products.filter.hoodies': 'Худи',
     'products.filter.sets': 'Комплекты',
     'products.contact': 'Связаться',
-    
+
     // Product items
     'product.tshirt1.name': 'Голубая хлопковая футболка',
     'product.tshirt1.desc': 'Удобная футболка из мягкого хлопка',
@@ -159,7 +159,7 @@ const translations: Record<Language, Record<string, string>> = {
     'product.hoodie1.desc': 'Тёплый и удобный свитер с капюшоном',
     'product.set1.name': 'Летний комплект',
     'product.set1.desc': 'Комплект из футболки и шорт',
-    
+
     // Marketplaces
     'marketplaces.title': 'Маркетплейсы',
     'marketplaces.subtitle': 'Нашу продукцию можно найти на следующих платформах',
@@ -170,7 +170,7 @@ const translations: Record<Language, Record<string, string>> = {
     'marketplaces.uzum': 'Uzum Market',
     'marketplaces.uzum.desc': 'Крупнейший онлайн магазин Узбекистана',
     'marketplaces.open': 'Смотреть',
-    
+
     // About
     'about.title': 'О нас',
     'about.story.title': 'Наша история',
@@ -182,7 +182,7 @@ const translations: Record<Language, Record<string, string>> = {
     'about.why.item2': 'Команда профессиональных мастеров',
     'about.why.item3': 'Современный и удобный дизайн',
     'about.why.item4': 'Доставка по всему Узбекистану',
-    
+
     // Contact
     'contact.title': 'Контакты',
     'contact.subtitle': 'Есть вопросы? Свяжитесь с нами!',
@@ -196,7 +196,7 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.form.message': 'Ваше сообщение',
     'contact.form.submit': 'Отправить',
     'contact.form.success': 'Сообщение успешно отправлено!',
-    
+
     // Footer
     'footer.rights': 'Все права защищены',
     'footer.tagline': 'Удобная и современная одежда для детей',
@@ -208,20 +208,20 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.marketplaces': 'Marketplaces',
     'nav.about': 'About Us',
     'nav.contact': 'Contact',
-    
+
     // Hero
     'hero.title': 'Comfortable and Modern Clothing for Children',
     'hero.subtitle': 'Soft, safe, and beautiful clothes for everyday wear',
     'hero.products': 'Products',
     'hero.contact': 'Contact Us',
-    
+
     // Categories
     'categories.title': 'Categories',
     'categories.tshirts': 'T-Shirts',
     'categories.pants': 'Pants',
     'categories.hoodies': 'Hoodies & Vests',
     'categories.sets': 'Sets',
-    
+
     // Values
     'values.title': 'Why Choose Us?',
     'values.natural': 'Natural Fabrics',
@@ -232,7 +232,7 @@ const translations: Record<Language, Record<string, string>> = {
     'values.safety.desc': 'All products are certified',
     'values.quality': 'Durable Quality',
     'values.quality.desc': 'Reliable stitching for everyday wear',
-    
+
     // Products
     'products.title': 'Products',
     'products.filter.all': 'All',
@@ -241,7 +241,7 @@ const translations: Record<Language, Record<string, string>> = {
     'products.filter.hoodies': 'Hoodies',
     'products.filter.sets': 'Sets',
     'products.contact': 'Contact Us',
-    
+
     // Product items
     'product.tshirt1.name': 'Blue Cotton T-Shirt',
     'product.tshirt1.desc': 'Comfortable t-shirt made from soft cotton',
@@ -255,7 +255,7 @@ const translations: Record<Language, Record<string, string>> = {
     'product.hoodie1.desc': 'Warm and comfortable hooded sweater',
     'product.set1.name': 'Summer Set',
     'product.set1.desc': 'T-shirt and shorts set',
-    
+
     // Marketplaces
     'marketplaces.title': 'Marketplaces',
     'marketplaces.subtitle': 'Find our products on the following platforms',
@@ -266,7 +266,7 @@ const translations: Record<Language, Record<string, string>> = {
     'marketplaces.uzum': 'Uzum Market',
     'marketplaces.uzum.desc': 'Uzbekistan\'s largest online store',
     'marketplaces.open': 'View',
-    
+
     // About
     'about.title': 'About Us',
     'about.story.title': 'Our Story',
@@ -278,7 +278,7 @@ const translations: Record<Language, Record<string, string>> = {
     'about.why.item2': 'Team of professional craftsmen',
     'about.why.item3': 'Modern and comfortable design',
     'about.why.item4': 'Delivery throughout Uzbekistan',
-    
+
     // Contact
     'contact.title': 'Contact',
     'contact.subtitle': 'Have questions? Get in touch with us!',
@@ -292,7 +292,7 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.form.message': 'Your Message',
     'contact.form.submit': 'Send',
     'contact.form.success': 'Message sent successfully!',
-    
+
     // Footer
     'footer.rights': 'All rights reserved',
     'footer.tagline': 'Comfortable and modern clothing for children',
@@ -304,20 +304,20 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.marketplaces': 'Pazaryerleri',
     'nav.about': 'Hakkımızda',
     'nav.contact': 'İletişim',
-    
+
     // Hero
     'hero.title': 'Çocuklar İçin Rahat ve Modern Giysiler',
     'hero.subtitle': 'Günlük kullanım için yumuşak, güvenli ve güzel giysiler',
     'hero.products': 'Ürünler',
     'hero.contact': 'İletişim',
-    
+
     // Categories
     'categories.title': 'Kategoriler',
     'categories.tshirts': 'Tişörtler',
     'categories.pants': 'Pantolonlar',
     'categories.hoodies': 'Kapüşonlular',
     'categories.sets': 'Setler',
-    
+
     // Values
     'values.title': 'Neden Biz?',
     'values.natural': 'Doğal Kumaşlar',
@@ -328,7 +328,7 @@ const translations: Record<Language, Record<string, string>> = {
     'values.safety.desc': 'Tüm ürünler sertifikalıdır',
     'values.quality': 'Dayanıklı Kalite',
     'values.quality.desc': 'Günlük kullanım için güvenilir dikiş',
-    
+
     // Products
     'products.title': 'Ürünler',
     'products.filter.all': 'Tümü',
@@ -337,7 +337,7 @@ const translations: Record<Language, Record<string, string>> = {
     'products.filter.hoodies': 'Kapüşonlular',
     'products.filter.sets': 'Setler',
     'products.contact': 'İletişim',
-    
+
     // Product items
     'product.tshirt1.name': 'Mavi Pamuklu Tişört',
     'product.tshirt1.desc': 'Yumuşak pamuktan yapılmış rahat tişört',
@@ -351,7 +351,7 @@ const translations: Record<Language, Record<string, string>> = {
     'product.hoodie1.desc': 'Sıcak ve rahat kapüşonlu kazak',
     'product.set1.name': 'Yaz Seti',
     'product.set1.desc': 'Tişört ve şort seti',
-    
+
     // Marketplaces
     'marketplaces.title': 'Pazaryerleri',
     'marketplaces.subtitle': 'Ürünlerimizi aşağıdaki platformlarda bulabilirsiniz',
@@ -362,7 +362,7 @@ const translations: Record<Language, Record<string, string>> = {
     'marketplaces.uzum': 'Uzum Market',
     'marketplaces.uzum.desc': 'Özbekistan\'ın en büyük online mağazası',
     'marketplaces.open': 'Görüntüle',
-    
+
     // About
     'about.title': 'Hakkımızda',
     'about.story.title': 'Hikayemiz',
@@ -374,7 +374,7 @@ const translations: Record<Language, Record<string, string>> = {
     'about.why.item2': 'Profesyonel ustalar ekibi',
     'about.why.item3': 'Modern ve rahat tasarım',
     'about.why.item4': 'Özbekistan genelinde teslimat',
-    
+
     // Contact
     'contact.title': 'İletişim',
     'contact.subtitle': 'Sorularınız mı var? Bizimle iletişime geçin!',
@@ -388,7 +388,7 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.form.message': 'Mesajınız',
     'contact.form.submit': 'Gönder',
     'contact.form.success': 'Mesaj başarıyla gönderildi!',
-    
+
     // Footer
     'footer.rights': 'Tüm hakları saklıdır',
     'footer.tagline': 'Çocuklar için rahat ve modern giysiler',
@@ -400,20 +400,20 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.marketplaces': 'Marchés',
     'nav.about': 'À Propos',
     'nav.contact': 'Contact',
-    
+
     // Hero
     'hero.title': 'Vêtements Confortables et Modernes pour Enfants',
     'hero.subtitle': 'Des vêtements doux, sûrs et beaux pour le quotidien',
     'hero.products': 'Produits',
     'hero.contact': 'Contact',
-    
+
     // Categories
     'categories.title': 'Catégories',
     'categories.tshirts': 'T-Shirts',
     'categories.pants': 'Pantalons',
     'categories.hoodies': 'Sweats à capuche',
     'categories.sets': 'Ensembles',
-    
+
     // Values
     'values.title': 'Pourquoi Nous?',
     'values.natural': 'Tissus Naturels',
@@ -424,7 +424,7 @@ const translations: Record<Language, Record<string, string>> = {
     'values.safety.desc': 'Tous les produits sont certifiés',
     'values.quality': 'Qualité Durable',
     'values.quality.desc': 'Coutures fiables pour un usage quotidien',
-    
+
     // Products
     'products.title': 'Produits',
     'products.filter.all': 'Tous',
@@ -433,7 +433,7 @@ const translations: Record<Language, Record<string, string>> = {
     'products.filter.hoodies': 'Sweats',
     'products.filter.sets': 'Ensembles',
     'products.contact': 'Contact',
-    
+
     // Product items
     'product.tshirt1.name': 'T-Shirt Bleu en Coton',
     'product.tshirt1.desc': 'T-shirt confortable en coton doux',
@@ -447,7 +447,7 @@ const translations: Record<Language, Record<string, string>> = {
     'product.hoodie1.desc': 'Pull chaud et confortable avec capuche',
     'product.set1.name': 'Ensemble Été',
     'product.set1.desc': 'Ensemble t-shirt et short',
-    
+
     // Marketplaces
     'marketplaces.title': 'Marchés',
     'marketplaces.subtitle': 'Trouvez nos produits sur les plateformes suivantes',
@@ -458,7 +458,7 @@ const translations: Record<Language, Record<string, string>> = {
     'marketplaces.uzum': 'Uzum Market',
     'marketplaces.uzum.desc': 'La plus grande boutique en ligne d\'Ouzbékistan',
     'marketplaces.open': 'Voir',
-    
+
     // About
     'about.title': 'À Propos',
     'about.story.title': 'Notre Histoire',
@@ -470,7 +470,7 @@ const translations: Record<Language, Record<string, string>> = {
     'about.why.item2': 'Équipe d\'artisans professionnels',
     'about.why.item3': 'Design moderne et confortable',
     'about.why.item4': 'Livraison dans tout l\'Ouzbékistan',
-    
+
     // Contact
     'contact.title': 'Contact',
     'contact.subtitle': 'Des questions? Contactez-nous!',
@@ -484,7 +484,7 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.form.message': 'Votre Message',
     'contact.form.submit': 'Envoyer',
     'contact.form.success': 'Message envoyé avec succès!',
-    
+
     // Footer
     'footer.rights': 'Tous droits réservés',
     'footer.tagline': 'Vêtements confortables et modernes pour enfants',

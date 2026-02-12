@@ -12,7 +12,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <h2 className="font-display text-2xl font-bold text-foreground">
-              SOF <span className="text-primary">KARAKUL</span>
+              Bolalar <span className="text-primary">Kiyimlari</span>
             </h2>
             <p className="text-muted-foreground text-sm leading-relaxed">
               {t('footer.tagline')}
@@ -85,7 +85,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-border">
           <p className="text-center text-muted-foreground text-sm">
-            © {new Date().getFullYear()} SOF KARAKUL. {t('footer.rights')}.
+            © {new Date().getFullYear()} Bollar Kiyimlari. {t('footer.rights')}.
           </p>
         </div>
       </div>
