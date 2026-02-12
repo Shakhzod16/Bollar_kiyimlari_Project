@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useMemo, useState } from 'react';
 import ProductCard from '@/components/ProductCard';
 
 import productTshirt1 from '@/assets/2.jpg';
@@ -25,80 +24,80 @@ type FilterType = 'all' | 'tshirts' | 'pants' | 'hoodies' | 'sets';
 interface Product {
 	id: number;
 	images: string[];
-	nameKey: string;
-	descKey: string;
-	category: FilterType;
+	name: string;
+	desc: string;
+	category: Exclude<FilterType, 'all'>;
 }
 
 const products: Product[] = [
 	{
 		id: 1,
 		images: [productTshirt1, productTshirt2],
-		nameKey: 'product.tshirt1.name',
-		descKey: 'product.tshirt1.desc',
+		name: "Ko'k paxta futbolka",
+		desc: 'Yumshoq paxta matodan tayyorlangan qulay futbolka.',
 		category: 'tshirts',
 	},
 	{
 		id: 2,
 		images: [productSett1, productSett2],
-		nameKey: 'product.Sett1.name',
-		descKey: 'product.Sett2.desc',
-		category: 'tshirts',
+		name: "Sariq to'plam (2 qism)",
+		desc: "Kundalik kiyish uchun qulay va chiroyli to'plam.",
+		category: 'sets',
 	},
 	{
 		id: 3,
 		images: [productPants1, productPants2],
-		nameKey: 'product.pants1.name',
-		descKey: 'product.pants1.desc',
+		name: 'Bej rangli shim',
+		desc: 'Kundalik kiyish uchun qulay paxta shim.',
 		category: 'pants',
 	},
 	{
 		id: 4,
 		images: [productSett3, productSett4],
-		nameKey: 'product.Sett3.name',
-		descKey: 'product.Sett4.desc',
+		name: 'Oq rangli shim',
+		desc: 'Yumshoq mato, bolalar uchun qulay va chiroyli.',
 		category: 'pants',
 	},
 	{
 		id: 5,
 		images: [productHoodie1, productHoodie2],
-		nameKey: 'product.hoodie1.name',
-		descKey: 'product.hoodie1.desc',
+		name: 'Bolalar hudisi',
+		desc: 'Issiq, yumshoq va qulay hudi — har kunlik uchun.',
 		category: 'hoodies',
 	},
 	{
 		id: 6,
 		images: [productSet1, productSet2],
-		nameKey: 'product.set1.name',
-		descKey: 'product.set1.desc',
+		name: "Yumshoq to'plam",
+		desc: "Moslangan kiyimlar to'plami — sovg'aga ham zo'r.",
 		category: 'sets',
 	},
 ];
 
-const Products = () => {
-	const { t } = useLanguage();
+export default function Products() {
 	const [filter, setFilter] = useState<FilterType>('all');
 
-	const filters: { key: FilterType; labelKey: string }[] = [
-		{ key: 'all', labelKey: 'products.filter.all' },
-		{ key: 'tshirts', labelKey: 'products.filter.tshirts' },
-		{ key: 'pants', labelKey: 'products.filter.pants' },
-		{ key: 'hoodies', labelKey: 'products.filter.hoodies' },
-		{ key: 'sets', labelKey: 'products.filter.sets' },
+	const filters: { key: FilterType; label: string }[] = [
+		{ key: 'all', label: 'Barchasi' },
+		{ key: 'tshirts', label: 'Futbolkalar' },
+		{ key: 'pants', label: 'Shimlar' },
+		{ key: 'hoodies', label: 'Hudilar' },
+		{ key: 'sets', label: "To'plamlar" },
 	];
 
-	const filteredProducts = filter === 'all' ? products : products.filter(p => p.category === filter);
+	const filteredProducts = useMemo(() => {
+		if (filter === 'all') return products;
+		return products.filter(p => p.category === filter);
+	}, [filter]);
 
 	return (
 		<div className='section-padding bg-background min-h-screen'>
 			<div className='container-custom'>
-				{/* Header */}
 				<div className='text-center mb-16 fade-in'>
-					<h1 className='font-display text-4xl md:text-5xl font-bold text-foreground mb-4'>{t('products.title')}</h1>
+					<h1 className='font-display text-4xl md:text-5xl font-bold text-foreground mb-4'>Mahsulotlar</h1>
 					<div className='w-20 h-1 bg-primary mx-auto rounded-full' />
 				</div>
 
-				{/* Filters */}
 				<div className='flex flex-wrap justify-center gap-3 mb-12'>
 					{filters.map(f => (
 						<button
@@ -109,20 +108,17 @@ const Products = () => {
 									? 'bg-primary text-primary-foreground shadow-lg scale-105'
 									: 'bg-secondary text-secondary-foreground hover:bg-muted hover:scale-105'
 							}`}>
-							{t(f.labelKey)}
+							{f.label}
 						</button>
 					))}
 				</div>
 
-				{/* Products Grid */}
 				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8'>
 					{filteredProducts.map(product => (
-						<ProductCard key={product.id} images={product.images} nameKey={product.nameKey} descKey={product.descKey} />
+						<ProductCard key={product.id} images={product.images} name={product.name} desc={product.desc} />
 					))}
 				</div>
 			</div>
 		</div>
 	);
-};
-
-export default Products;
+}
