@@ -12,6 +12,7 @@ import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/NotFound";
 
+
 const queryClient = new QueryClient();
 
 const App = () => (
