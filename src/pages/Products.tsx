@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import ProductCard from '@/components/ProductCard';
-import productTshirt1 from '@/assets/product-tshirt-1.jpg';
-import productTshirt2 from '@/assets/product-tshirt-2.jpg';
-import productPants1 from '@/assets/product-pants-1.jpg';
-import productPants2 from '@/assets/product-pants-2.jpg';
+import productTshirt1 from '@/assets/1.jpg';
+import productTshirt2 from '@/assets/2.jpg';
+import productPants1 from '@/assets/3.jpg';
+import productPants2 from '@/assets/4.png';
 import productHoodie1 from '@/assets/product-hoodie-1.jpg';
 import productSet1 from '@/assets/product-set-1.jpg';
 
@@ -39,8 +39,8 @@ const Products = () => {
     { key: 'sets', labelKey: 'products.filter.sets' },
   ];
 
-  const filteredProducts = filter === 'all' 
-    ? products 
+  const filteredProducts = filter === 'all'
+    ? products
     : products.filter(p => p.category === filter);
 
   return (
