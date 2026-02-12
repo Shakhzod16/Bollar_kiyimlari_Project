@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Kid-friendly warm pastel palette */
+    --background: 30 40% 99%;
+    --foreground: 220 20% 20%;
+
+    --card: 30 30% 98%;
+    --card-foreground: 220 20% 20%;
+
+    --popover: 30 40% 99%;
+    --popover-foreground: 220 20% 20%;
+
+    /* Soft coral/peach primary */
+    --primary: 15 70% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Light cream secondary */
+    --secondary: 35 40% 95%;
+    --secondary-foreground: 220 20% 25%;
+
+    /* Muted tones */
+    --muted: 30 20% 93%;
+    --muted-foreground: 220 10% 45%;
+
+    /* Soft teal accent */
+    --accent: 175 45% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 25% 90%;
+    --input: 30 25% 90%;
+    --ring: 15 70% 65%;
+
+    --radius: 1rem;
+
+    /* Custom tokens */
+    --cream: 35 40% 96%;
+    --warm-white: 30 40% 99%;
+    --soft-blue: 200 60% 85%;
+    --soft-green: 145 45% 80%;
+    --soft-peach: 15 70% 85%;
+    --soft-lavender: 260 50% 88%;
+    
+    /* Typography */
+    --font-display: 'Quicksand', sans-serif;
+    --font-body: 'Nunito', sans-serif;
+
+    /* Shadows - softer for kid-friendly feel */
+    --shadow-soft: 0 2px 15px -3px hsl(220 20% 20% / 0.06);
+    --shadow-card: 0 4px 20px -5px hsl(220 20% 20% / 0.08);
+    --shadow-hover: 0 8px 30px -5px hsl(220 20% 20% / 0.12);
+
+    /* Transitions */
+    --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 35 40% 96%;
+    --sidebar-foreground: 220 20% 25%;
+    --sidebar-primary: 15 70% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 35 40% 95%;
+    --sidebar-accent-foreground: 220 20% 25%;
+    --sidebar-border: 30 25% 90%;
+    --sidebar-ring: 15 70% 65%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 30 30% 95%;
+
+    --card: 220 20% 14%;
+    --card-foreground: 30 30% 95%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 30 30% 95%;
+
+    --primary: 15 65% 60%;
+    --primary-foreground: 220 20% 10%;
+
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 30 30% 95%;
+
+    --muted: 220 15% 22%;
+    --muted-foreground: 30 20% 65%;
+
+    --accent: 175 40% 45%;
+    --accent-foreground: 220 20% 10%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 22%;
+    --input: 220 15% 22%;
+    --ring: 15 65% 60%;
+
+    --sidebar-background: 220 20% 12%;
+    --sidebar-foreground: 30 30% 95%;
+    --sidebar-primary: 15 65% 60%;
+    --sidebar-primary-foreground: 220 20% 10%;
+    --sidebar-accent: 220 15% 18%;
+    --sidebar-accent-foreground: 30 30% 95%;
+    --sidebar-border: 220 15% 22%;
+    --sidebar-ring: 15 65% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .text-display {
+    font-family: var(--font-display);
+  }
+
+  .text-body {
+    font-family: var(--font-body);
+  }
+
+  /* Kid-friendly button styles with rounded corners */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3 text-sm font-semibold tracking-wide bg-primary text-primary-foreground rounded-full transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-3 text-sm font-semibold tracking-wide border-2 border-primary text-primary bg-transparent rounded-full transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:scale-105;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-6 py-2 text-sm font-medium tracking-wide text-foreground bg-transparent transition-all duration-300 hover:text-primary;
+  }
+
+  /* Card styles with more rounded corners */
+  .card-premium {
+    @apply bg-card rounded-2xl overflow-hidden transition-all duration-500;
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-premium:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  /* Accent underline */
+  .gold-underline {
+    @apply relative inline-block;
+  }
+
+  .gold-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 transition-transform duration-300 origin-left rounded-full;
+  }
+
+  .gold-underline:hover::after {
+    @apply scale-x-100;
+  }
+
+  /* Fade in animation */
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Stagger children animation */
+  .stagger-children > * {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+  .stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+  .stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+  .stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+  .stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+  .stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
+
+  /* Category card hover effect */
+  .category-card {
+    @apply relative overflow-hidden rounded-2xl transition-all duration-500;
+  }
+
+  .category-card:hover {
+    transform: translateY(-8px);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
