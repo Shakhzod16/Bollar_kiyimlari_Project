@@ -3,16 +3,22 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import ProductCard from '@/components/ProductCard';
 
 import productTshirt1 from '@/assets/2.jpg';
-import productTshirt2 from '@/assets/3.png';
+import productTshirt2 from '@/assets/3.jpg';
 
 import productPants1 from '@/assets/2.png';
-import productPants2 from '@/assets/2(1).png';
+import productPants2 from '@/assets/2(2).png';
 
-import productHoodie1 from '@/assets/product-hoodie-1.jpg';
-import productHoodie2 from '@/assets/product-hoodie-1.jpg';
+import productHoodie1 from '@/assets/10.png';
+import productHoodie2 from '@/assets/10(1).png';
 
-import productSet1 from '@/assets/product-set-1.jpg';
-import productSet2 from '@/assets/product-set-1.jpg';
+import productSet1 from '@/assets/9.png';
+import productSet2 from '@/assets/9(1).png';
+
+import productSett1 from '@/assets/12.png';
+import productSett2 from '@/assets/12(1).png';
+
+import productSett3 from '@/assets/11.png';
+import productSett4 from '@/assets/11(1).png';
 
 type FilterType = 'all' | 'tshirts' | 'pants' | 'hoodies' | 'sets';
 
@@ -34,20 +40,34 @@ const products: Product[] = [
 	},
 	{
 		id: 2,
+		images: [productSett1, productSett2],
+		nameKey: 'product.Sett1.name',
+		descKey: 'product.Sett2.desc',
+		category: 'tshirts',
+	},
+	{
+		id: 3,
 		images: [productPants1, productPants2],
 		nameKey: 'product.pants1.name',
 		descKey: 'product.pants1.desc',
 		category: 'pants',
 	},
 	{
-		id: 3,
+		id: 4,
+		images: [productSett3, productSett4],
+		nameKey: 'product.Sett3.name',
+		descKey: 'product.Sett4.desc',
+		category: 'pants',
+	},
+	{
+		id: 5,
 		images: [productHoodie1, productHoodie2],
 		nameKey: 'product.hoodie1.name',
 		descKey: 'product.hoodie1.desc',
 		category: 'hoodies',
 	},
 	{
-		id: 4,
+		id: 6,
 		images: [productSet1, productSet2],
 		nameKey: 'product.set1.name',
 		descKey: 'product.set1.desc',
