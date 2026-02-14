@@ -20,19 +20,17 @@ const FALLBACK_IMG = 'https://placehold.co/1200x800/png?text=No+Image&font=robot
 
 // ✅ Internet LOGO'lar (Wikimedia PNG preview)
 const LOGOS = {
-	uzum: 'https://upload.wikimedia.org/wikipedia/commons/8/8c/Uzum_logo.png',
-	yandex: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Yandex-market.svg/960px-Yandex-market.svg.png',
-	ozon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Ozon_logo_clear.svg/500px-Ozon_logo_clear.svg.png',
-	wildberries:
-		'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Wildberries_2023_Pink.svg/500px-Wildberries_2023_Pink.svg.png',
+	uzum: '/src/assets/uzummarket.png',
+	yandex: '/src/assets/yandexmarket.png',
+	ozon: '/src/assets/ozon.png',
+	wildberries: '/src/assets/wb.png',
 };
 
 // ✅ Internet PRODUCT rasmlar (Unsplash direct)
 const PRODUCT_IMG = {
-	jogger: 'https://images.unsplash.com/photo-1520975958221-3f44b4f0b0c1?auto=format&fit=crop&w=1600&q=80',
-	short: 'https://images.unsplash.com/photo-1520975682038-03f5b4b1b3a6?auto=format&fit=crop&w=1600&q=80',
-	kofta: 'https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=1600&q=80',
-	newp: 'https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1600&q=80',
+	jogger: 'https://avatars.mds.yandex.net/get-mpic/16497166/2a0000019c4d105b29e96d21f9ad4718b133/optimize',
+	short: 'https://avatars.mds.yandex.net/get-mpic/15072245/2a0000019c4d17b1ab80cfbd432570726b90/optimize',
+	kofta: 'https://avatars.mds.yandex.net/get-mpic/18944582/2a0000019c4d256e9482e4534e926056af60/optimize',
 };
 
 const MARKETPLACES: Marketplace[] = [
@@ -57,11 +55,6 @@ const MARKETPLACES: Marketplace[] = [
 				url: 'https://uzum.uz/uz/product/chaqaloq-uchun-nozik-kofta-2397299',
 				image: PRODUCT_IMG.kofta,
 			},
-			{
-				name: 'Yangi mahsulot',
-				url: 'https://uzum.uz',
-				image: PRODUCT_IMG.newp,
-			},
 		],
 	},
 	{
@@ -84,11 +77,6 @@ const MARKETPLACES: Marketplace[] = [
 				name: 'Chaqaloq kofta',
 				url: 'https://market.yandex.uz/card/myagkaya-i-komfortnaya-koftochka-dlya-malyshey--idealnyy-variant-dlya-povsednevnoy-noski-v-lyuboye-vremya-goda/5134425258?businessId=216503443&ogV=-12',
 				image: PRODUCT_IMG.kofta,
-			},
-			{
-				name: 'Yangi mahsulot',
-				url: 'https://market.yandex.uz',
-				image: PRODUCT_IMG.newp,
 			},
 		],
 	},
@@ -113,11 +101,6 @@ const MARKETPLACES: Marketplace[] = [
 				url: 'https://uz.ozon.com/product/koftochka-dlya-novorozhdennogo-3525612412/?oos_search=false',
 				image: PRODUCT_IMG.kofta,
 			},
-			{
-				name: 'Yangi mahsulot',
-				url: 'https://uz.ozon.com',
-				image: PRODUCT_IMG.newp,
-			},
 		],
 	},
 	{
@@ -128,7 +111,7 @@ const MARKETPLACES: Marketplace[] = [
 		products: [
 			{
 				name: 'Jogger shim',
-				url: 'https://www.wildberries.ru/catalog/820771522/detail.aspx?targetUrl=GP',
+				url: 'https://www.wildberries.ru/catalog/820783202/detail.aspx?targetUrl=GP',
 				image: PRODUCT_IMG.jogger,
 			},
 			{
@@ -138,23 +121,19 @@ const MARKETPLACES: Marketplace[] = [
 			},
 			{
 				name: 'Chaqaloq kofta',
-				url: 'https://www.wildberries.ru/catalog/820783202/detail.aspx?targetUrl=GP',
+				url: 'https://www.wildberries.ru/catalog/820771522/detail.aspx?targetUrl=GP',
 				image: PRODUCT_IMG.kofta,
-			},
-			{
-				name: 'Yangi mahsulot',
-				url: 'https://www.wildberries.ru',
-				image: PRODUCT_IMG.newp,
 			},
 		],
 	},
 ];
 
-function SafeImg(props: React.ImgHTMLAttributes<HTMLImageElement>) {
+function SafeImg({ className, ...props }: React.ImgHTMLAttributes<HTMLImageElement>) {
 	return (
 		<img
 			{...props}
 			loading='lazy'
+			className={className} // ✅ tashqaridan kelgan class ishlaydi
 			referrerPolicy='no-referrer'
 			onError={e => {
 				const img = e.currentTarget;
@@ -164,6 +143,7 @@ function SafeImg(props: React.ImgHTMLAttributes<HTMLImageElement>) {
 		/>
 	);
 }
+
 
 export default function Marketplaces() {
 	const [selectedId, setSelectedId] = useState<Marketplace['id'] | null>(null);
@@ -217,22 +197,23 @@ export default function Marketplaces() {
 							</p>
 						</div>
 
-						<div className='mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4'>
+						<div className='mt-12 flex flex-wrap justify-center gap-6'>
 							{selected.products.slice(0, 4).map((p, idx) => (
 								<a
 									key={idx}
 									href={p.url}
 									target='_blank'
 									rel='noopener noreferrer'
-									className='group overflow-hidden rounded-3xl bg-white/85 border border-black/5
-                             shadow-[0_18px_60px_rgba(31,36,48,0.12)]
-                             hover:shadow-[0_22px_70px_rgba(31,36,48,0.16)]
-                             transition-all duration-300 hover:-translate-y-1'>
-									<div className='relative h-44 w-full overflow-hidden bg-black/[0.03]'>
+									className='group w-full sm:w-1/2 lg:w-1/4 max-w-[280px]
+                 overflow-hidden rounded-3xl bg-white/85 border border-black/5
+                 shadow-[0_18px_60px_rgba(31,36,48,0.12)]
+                 hover:shadow-[0_22px_70px_rgba(31,36,48,0.16)]
+                 transition-all duration-300 hover:-translate-y-1'>
+									<div className='relative h-[300px] w-full overflow-hidden bg-black/[0.03]'>
 										<SafeImg
 											src={p.image}
 											alt={p.name}
-											className='h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]'
+											className='h-full w-full object-cover object-[center_-62px] transition-transform duration-500 group-hover:scale-[1.04]'
 										/>
 									</div>
 
@@ -275,7 +256,7 @@ export default function Marketplaces() {
                          hover:shadow-[0_22px_70px_rgba(31,36,48,0.16)]
                          transition-all duration-300 hover:-translate-y-1'>
 							<div className='mx-auto mb-6 flex items-center justify-center'>
-								<SafeImg src={m.logo} alt={`${m.title} logo`} className='h-14 w-auto' />
+								<SafeImg src={m.logo} alt={`${m.title} logo`} className='h-14 w-auto ' />
 							</div>
 
 							<h3 className='text-center text-xl font-extrabold text-[#1f2430]'>{m.title}</h3>
